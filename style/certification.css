@@ -1,0 +1,100 @@
+#certification {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 50px 0px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.card {
+    position: relative;
+    width: 95%;
+    max-width: 500px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    overflow: hidden;
+    
+}
+
+.card h3 {
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 170px;
+
+    padding: 10px 30px;
+
+    overflow: hidden;
+}
+
+.animationL {
+    animation: animationL 0.5s ease-in-out;
+}
+
+@keyframes animationL {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.animationR {
+    animation: animationR 0.5s ease-in-out;
+}
+
+@keyframes animationR {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.card-info h4 {
+    color: var(--cor02);
+    font-size: 1.2rem;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    line-height: 20px;
+}
+
+.card-info a {
+    color: var(--cor02);
+}
+
+.card button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+}
+
+.btn-left {
+    left: 0;
+}
+
+.btn-right {
+    right: 0;
+}

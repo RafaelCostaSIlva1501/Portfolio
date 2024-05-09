@@ -1,0 +1,9 @@
+#contact {
+    color: var(--corTexto);
+    padding: 10px;
+    text-align: center;
+}
+
+#contact a {
+    color: var(--corTexto);
+}

@@ -1,0 +1,99 @@
+/*Sessão Início*/
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 90vh;
+}
+
+/*Container texto principal*/
+.intro-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/*"Rafael da Costa Silva"*/
+.intro-mobile h1 {
+    color: var(--cor02);
+    font-size: 2rem;
+}
+
+/*"Desenvolvedor Front End"*/
+.intro-mobile p {
+    color: var(--cor02);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/*Container slogan*/
+.slogan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: calc(320px + 2vw);
+    width: 100%;
+    color: white;
+}
+
+/*configurações do slogan que será animado*/
+.animation-slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(350px + 10vw);
+    height: calc(250px + 2vw);
+    margin: 15px 0px;
+    border: 2px solid white;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    animation: luzSlogan 1.5s ease-in-out;
+}
+
+/*Animação do slogan*/
+@keyframes luzSlogan {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    50% {
+        width: calc(calc(350px + 10vw));
+        height: 0px;
+    }
+
+    100% {
+        height: calc(250px + 2vw);
+    }
+}
+
+/*Primeira palavra do slogan*/
+.traduzindo {
+    font-weight: 600;
+    font-size: calc(40px + 2vw);
+    font-family: Raleway;
+}
+
+/*Segunda palavra do slogan*/
+.criatividade {
+    font-size: calc(40px + 2vw);
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    width: max-content;
+    padding: 0px 3px;
+}
+
+/*Terceira palavra do slogan*/
+.codigo {
+    font-family: Raleway;
+    letter-spacing: 4px;
+    font-size: calc(35px + 2vw);
+    font-weight: 100;
+}
