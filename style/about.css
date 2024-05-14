@@ -5,13 +5,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    border-top: 1px solid var(--cor01);
 }
 
 /*Título da sessão*/
 #about h2 {
     text-align: center;
-    color: var(--cor01);
+    color: white;
     letter-spacing: 4px;
 }
 
@@ -33,20 +32,22 @@
     gap: 20px;
 }
 
-/*Minha foto */
+/*Minha foto*/
 .img-sobre img {
     display: block;
     width: 250px;
     margin: 0px auto;
-    border: 2px solid var(--cor01A);
     border-radius: 50%;
+    box-shadow: 0px 0px 20px #ffffff28;
 }
 
 /*Parágrafos da sessão sobre*/
 #about p {
     line-height: 20px;
-    color: var(--cor01);
+    color: white;
     margin-bottom: 10px;
+
+    font-family: "Raleway";
     font-weight: 400;
     font-size: 1rem;
 }
@@ -60,16 +61,43 @@
 
 /*Foto das midias sociais*/
 .midias img {
-    width: 50px;
-    height: 50px;
-    background-color: var(--cor01);
-    border: 1px solid var(--cor01);
+    max-width: 50px;
+    max-height: 50px;
+    background-color: white;
+    border: 1px solid white;
     border-radius: 50%;
 }
 
-/*Fotos das midias sociais ao passar o mouse*/
-.midias img:hover {
-    box-shadow: 0px 0px 10px 1px var(--cor01);
-    transform: scale(1.1);
-    transition: box-shadow 0.3s, transform 0.3s;
+/*Estilos da sessão "sobre" em telas maiores*/
+@media screen and (min-width: 987px) {
+    /*Muda a direção da foto e texto*/
+    .content-sobre {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /*Minha foto*/
+    .img-sobre img {
+        width: 330px;
+        height: 330px;
+    }
+
+    /*Texto sobre mim*/
+    .txt-sobre {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        height: 400px;
+    }
+
+    /*Fotos das midias sociais depois de apertar*/
+    .midias img:hover {
+        box-shadow: 0px 0px 10px 1px white;
+        transform: scale(1.1);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
 }

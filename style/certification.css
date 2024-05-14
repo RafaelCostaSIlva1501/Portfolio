@@ -1,3 +1,4 @@
+/*Sessão de certificações e diferenciais*/
 #certification {
     display: flex;
     flex-direction: column;
@@ -9,9 +10,10 @@
     box-shadow: 0px 0px 5px black;
 }
 
+/*Card com as certificações e com os diferenciais*/
 .card {
     position: relative;
-    width: 95%;
+    width: 90%;
     max-width: 500px;
     height: 200px;
     padding: 5px;
@@ -21,6 +23,7 @@
     
 }
 
+/*Título do card*/
 .card h3 {
     font-weight: lighter;
     text-align: center;
@@ -28,7 +31,8 @@
     font-weight: 400;
 }
 
-.card-info {
+/*Conteúdo do card*/
+.card-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -40,10 +44,12 @@
     overflow: hidden;
 }
 
+/*Classe adicionada com javascript para animar o card da esquerda pra direita*/
 .animationL {
     animation: animationL 0.5s ease-in-out;
 }
 
+/*Animação de movimento da esquerda para a direita*/
 @keyframes animationL {
     0% {
         transform: translateX(-100%);
@@ -53,10 +59,12 @@
     }
 }
 
+/*Classe adicionada com javascript para animar o card da direita pra esquerda*/
 .animationR {
     animation: animationR 0.5s ease-in-out;
 }
 
+/*Animação de movimento da direita para a esquerda */
 @keyframes animationR {
     0% {
         transform: translateX(100%);
@@ -66,20 +74,24 @@
     }
 }
 
-.card-info h4 {
+/*Título do conteúdo exibido no card*/
+.card-content h4 {
     color: var(--cor02);
     font-size: 1.2rem;
 }
 
-.card-info p {
+/*Texto do conteúdo exibido no card*/
+.card-content p {
     font-size: 0.9rem;
     line-height: 20px;
 }
 
-.card-info a {
+/*Link para baixar o conteúdo do card*/
+.card-content a {
     color: var(--cor02);
 }
 
+/*Botões para navegar entre os cards*/
 .card button {
     background: none;
     border: none;
@@ -91,10 +103,31 @@
     cursor: pointer;
 }
 
+/*Ícone de setas dos botões de navegação do card*/
+.card button span {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+/*Botão esquerdo*/
 .btn-left {
     left: 0;
 }
 
+/*Botão direito*/
 .btn-right {
     right: 0;
+}
+
+/*Estilos da sessão "certificações e diferenciais" em telas maiores*/
+@media screen and (min-width: 987px) {
+    /*Sessão de certificações e diferenciais*/
+    #certification {
+        flex-direction: row;
+    }
+
+    /*Card com as certificações e com os diferenciais*/
+    .card {
+        width: 45%;
+    }
 }

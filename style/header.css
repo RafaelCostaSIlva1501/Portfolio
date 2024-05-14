@@ -19,31 +19,30 @@
     cursor: pointer;
 }
 
-/*Botão de menu com o mouse em cima*/
-.home-header button:hover {
+/*Botão de menu ao ser pressionado*/
+.home-header button:active {
     background-color: black;
     color: white;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/*Esconde o texto inicial em telas menores*/
-.intro-desktop {
-    display: none;
-}
-
-/*Título principal <h1> do desktop*/
-.intro-desktop h1 {
+/*Título principal escrito "Rafael da Costa Silva"*/
+.intro h1 {
+    text-align: center;
     color: var(--cor02);
     font-size: 2rem;
-    text-align: center;
 }
 
-/*Parágrafo <p> do desktop*/
-.intro-desktop p {
-    color: var(--cor02);
+/*Parágrafo escrito "Desenvolvedor Front End"*/
+.intro p {
     text-align: center;
+    color: var(--cor02);
     font-size: 13px;
     letter-spacing: 3px;
+}
+
+/*Esconde o título principal para telas maiores*/
+.intro-desktop {
+    display: none;
 }
 
 /*Navegação*/
@@ -83,4 +82,46 @@ ul li:hover {
 ul li a {
     text-decoration: none;
     color: inherit;
+}
+
+/*Estilos de cabeçalho em telas maiores*/
+@media screen and (min-width: 987px) {
+    /*Cabeçalho (Desktop)*/
+    .home-header {
+        width: 100%;
+    }
+
+    /*Esconde o botão que abre e fecha o menu (Desktop)*/
+    .home-header button {
+        display: none;
+    }
+
+    /*Exibe o título principal em telas maiores*/
+    .intro-desktop {
+        display: block;
+    }
+
+    /*Navegação (Desktop)*/
+    nav {
+        max-height: max-content;
+        width: 100%;
+    }
+
+    /*Lista (Desktop)*/
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Itens da lista (Desktop)*/
+    ul li {
+        color: white;
+    }
+
+    /*Itens da lista ao passar o mouse por cima (Desktop)*/
+    ul li:hover {
+        background-color: var(--cor02);
+    }
 }

@@ -6,7 +6,7 @@ document.getElementById("btnMenu").addEventListener("click", function () {
 const projects = [
     {
         title: "RPG +",
-        img: "",
+        img: "img/project-img/rpg-plus.jpg",
         tag: ["React", "JavaScript", "Css"],
         info: "RPG+ é uma plataforma de streaming que mergulha os entusiastas de rpg em um mundo de aventuras, narrativas envolventes e entretenimento imersivo. O coração do projeto reside em sua vasta biblioteca de episódios de RPGs, cuidadosamente organizados em categorias que abrangem uma ampla gama de gêneros, desde as aventuras de fantasia épica até os cenários de ficção científica futurista, há algo para todos os gostos e preferências.",
         code: "https://github.com/RafaelCostaSIlva1501/Rpg-Plus",
@@ -15,8 +15,8 @@ const projects = [
 
     {
         title: "Chat Online",
-        img: "",
-        tag: ["Html", "Css", "JavaScript", "Node"],
+        img: "img/project-img/chat-online.jpg",
+        tag: ["Html", "Css", "JavaScript", "Node JS"],
         info: "Meu primeiro projeto fullstack é um chat online simples e intuitivo. Ele permite que usuários se conectem instantaneamente e conversem em tempo real. Com uma interface limpa e amigável, os usuários podem trocar mensagens facilmente, proporcionando uma experiência de comunicação fluida e direta.",
         code: "https://github.com/RafaelCostaSIlva1501/Chat-Online",
         view: "https://chat-frontend-d9tu.onrender.com/",
@@ -24,11 +24,20 @@ const projects = [
 
     {
         title: "Snake Game",
-        img: "",
+        img: "img/project-img/snake-game.jpg",
         tag: ["Html", "Css", "JavaScript"],
         info: "Snake Game é uma versão moderna do clássico jogo da cobrinha. Além da jogabilidade tradicional, o jogo oferece uma interface de configurações que permite aos jogadores ajustarem a velocidade da cobra, escolherem cores personalizadas e controlarem outras funções, proporcionando uma experiência de jogo altamente personalizável.",
         code: "https://github.com/RafaelCostaSIlva1501/Snake-Game",
         view: "https://rafaelcostasilva1501.github.io/Snake-Game/",
+    },
+
+    {
+        title: "Paint",
+        img: "img/project-img/paint.jpg",
+        tag: ["Html", "Css", "JavaScript"],
+        info: "Com este projeto de pintura interativa, você pode soltar a criatividade desenhando livremente, ajustando o tamanho do pincel, usando a borracha e o balde de tinta. Além disso, é possível salvar suas obras de arte em uma galeria pessoal e fazer o download das criações para compartilhar com o mundo!",
+        code: "https://github.com/RafaelCostaSIlva1501/Paint",
+        view: "https://rafaelcostasilva1501.github.io/Paint/",
     },
 ];
 
