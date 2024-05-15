@@ -38,7 +38,7 @@
 
 /*Imagem do projeto*/
 .project-content img {
-    min-height: 220px;
+    min-height: 207px;
     border-top: 5px solid var(--cor03);
     background-color: black;
 }
