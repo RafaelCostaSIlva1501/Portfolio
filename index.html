@@ -16,7 +16,7 @@
             /*Importando as fontes Roboto e Raleway*/
             @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-            /*Paleta de cores dentro do root*/
+            /*Paleta de cores usadas*/
             :root {
                 --cor01: #f2d541;
                 --cor01A: #f2d54115;
@@ -66,16 +66,20 @@
         <link rel="stylesheet" href="style/footer.css" />
     </head>
     <body>
+        <!--Cabeçalho dá página-->
         <header class="home-header">
+            <!--Título principal em telas maiores-->
             <section class="intro intro-desktop">
                 <h1>Rafael da Costa Silva</h1>
                 <p>DESENVOLVEDOR ● FRONT-END</p>
             </section>
 
-            <button>
+            <!--Botão do menu-->
+            <button type="menu">
                 <span class="material-symbols-outlined" id="btnMenu">menu</span>
             </button>
 
+            <!--Menu de navegação-->
             <nav id="menu">
                 <ul>
                     <li><a href="#home">Início</a></li>
@@ -87,13 +91,17 @@
             </nav>
         </header>
 
+        <!--Sessão inicial dá pagina-->
         <main id="home">
+            <!--Título principal para telas menores-->
             <section class="intro intro-mobile">
                 <h1>Rafael da Costa Silva</h1>
                 <p>DESENVOLVEDOR ● FRONT-END</p>
             </section>
 
+            <!--Meu slogan-->
             <section class="slogan">
+                <!--div com animação-->
                 <div class="animation-slogan">
                     <span class="traduzindo"> TRADUZINDO </span>
 
@@ -102,18 +110,23 @@
                     <span class="codigo"> EM CÓDIGO </span>
                 </div>
             </section>
-
-            <section class="tecnologias"></section>
         </main>
 
+        <!--Sessão sobre mim-->
         <section id="about">
+            <!--Título da sessão-->
             <h2>SOBRE MIM</h2>
 
+            <!--Conteúdo da sessão-->
             <section class="content-sobre">
+                <!--Container com minha foto e mídias sociais-->
                 <div class="img-sobre">
+                    <!--Minha foto-->
                     <img src="img/eu.jpg" alt="Minha foto" />
 
+                    <!--Container com as mídias sociais-->
                     <div class="midias">
+                        <!--Github-->
                         <a href="https://github.com/RafaelCostaSIlva1501">
                             <img
                                 src="img/midia-icons/github-logo.png"
@@ -121,6 +134,7 @@
                             />
                         </a>
 
+                        <!--Linkedin-->
                         <a
                             href="https://www.linkedin.com/in/rafael-da-costa-silva-29853b287/"
                         >
@@ -130,14 +144,25 @@
                             />
                         </a>
 
+                        <!--Instagram-->
                         <a href="https://www.instagram.com/rafaelalloces/">
                             <img
                                 src="img/midia-icons/instagram-logo.png"
                                 alt="Instagram"
                             />
                         </a>
+
+                        <!--Whatsapp-->
+                        <a href="https://wa.me/5511953087026" target="_blank">
+                            <img
+                                src="img/midia-icons/whatsapp-logo.png"
+                                alt="Whatsapp"
+                            />
+                        </a>
                     </div>
                 </div>
+
+                <!--Texto sobre mim-->
                 <div class="txt-sobre">
                     <p>
                         <span style="font-size: 30px">Olá</span>, meu nome é
@@ -174,26 +199,38 @@
             </section>
         </section>
 
+        <!--Sessão projetos-->
         <section id="projects">
+            <!--Cabeçalho da sessão de projetos-->
             <header class="projects-header">
+                <!--Título da sessão de projetos-->
                 <h2>Projetos</h2>
+                <!--Texto do cabeçalho da sessão de projetos-->
                 <p>
                     CONFIRA ALGUNS DOS PROJETOS QUE DESENVOLVI, UTILIZANDO AS
                     TECNOLOGIAS COM AS QUAIS TRABALHO.
                 </p>
             </header>
 
+            <!--Conteúdo da sessão projetos-->
             <section class="project-content">
+                <!--Imagem do projeto-->
                 <img id="projectImg" />
 
+                <!--Detalhes do projeto-->
                 <div class="project-details">
+                    <!--Título do projeto-->
                     <h3 id="projectTitle"></h3>
 
+                    <!--Tecnologias usadas no projeto (Tags)-->
                     <div class="container-tags" id="projectTag"></div>
 
+                    <!--Texto que fala sobre o projeto-->
                     <p id="projectInfo"></p>
 
+                    <!--Links do projeto-->
                     <div class="container-links">
+                        <!--Código fonte do projeto no github-->
                         <a id="projectCode" target="_blank">
                             <span class="material-symbols-outlined">
                                 code
@@ -201,6 +238,7 @@
                             Ver código
                         </a>
 
+                        <!--Vizualização do projeto-->
                         <a id="projectView" target="_blank">
                             <span class="material-symbols-outlined">
                                 devices
@@ -209,13 +247,17 @@
                         </a>
                     </div>
                 </div>
+
+                <!--Rodapé da sessão projetos-->
                 <footer class="projects-footer">
+                    <!--Botão para ver projeto anterior-->
                     <button onclick="backProject()">
                         <span class="material-symbols-outlined"
                             >arrow_back</span
                         >
                     </button>
 
+                    <!--Botão para ver o próximo projeto-->
                     <button onclick="nextProject()">
                         <span class="material-symbols-outlined"
                             >arrow_forward</span
@@ -225,26 +267,35 @@
             </section>
         </section>
 
+        <!--Sessão de certificações e diferenciais-->
         <section id="certification">
+            <!--Card com minhas certificações-->
             <div class="card">
+                <!--Título do card-->
                 <h3>CERTIFICAÇÕES</h3>
 
+                <!--Conteúdo do card de certificações-->
                 <div
                     class="card-content"
                     id="certified"
                     style="justify-content: space-between"
                 >
+                    <!--Título da certificação exibida-->
                     <h4 id="certifiedTitle"></h4>
+                    <!--Sobre a certificação-->
                     <p id="certifiedInfo"></p>
+                    <!--Link para ver certificação-->
                     <a id="certifiedView" target="_blank">Ver Certificação</a>
                 </div>
 
+                <!--Botão para ver certificação anterior-->
                 <button class="btn-left" onclick="backCertified()">
                     <span class="material-symbols-outlined">
                         chevron_left
                     </span>
                 </button>
 
+                <!--Botão para ver a próxima certificação-->
                 <button class="btn-right" onclick="nextCertified()">
                     <span class="material-symbols-outlined">
                         chevron_Right
@@ -252,20 +303,27 @@
                 </button>
             </div>
 
+            <!--Card com os meus diferenciais-->
             <div class="card">
+                <!--Título do card-->
                 <h3>DIFERENCIAIS</h3>
 
+                <!--Conteúdo do card de diferenciais-->
                 <div class="card-content" id="differential">
+                    <!--Título do diferencial exibido-->
                     <h4 id="differentialTitle"></h4>
+                    <!--Sobre o diferencial-->
                     <p id="differentialInfo"></p>
                 </div>
 
+                <!--Botão para ver o diferencial anterior-->
                 <button class="btn-left" onclick="backDifferential()">
                     <span class="material-symbols-outlined">
                         chevron_left
                     </span>
                 </button>
 
+                <!--Botão para ver o próximo diferencial-->
                 <button class="btn-right" onclick="nextDifferential()">
                     <span class="material-symbols-outlined">
                         chevron_Right
@@ -274,15 +332,37 @@
             </div>
         </section>
 
-        <footer id="contact">
-            <p>
-                Desenvolvido por
-                <a
-                    href="https://wa.me/5511953087026?text=Apenas um teste"
-                    target="_blank"
+        <!--Rodapé da página-->
+        <footer id="footer">
+            <!--Link para meu whatsapp-->
+            <span>
+                Portfólio desenvolvido por
+                <a href="https://wa.me/5511953087026" target="_blank"
                     >Rafael da Costa Silva</a
                 >
-            </p>
+            </span>
+
+            <!--Crédito do ícone do github-->
+            <span>
+                Ícone github por
+                <a
+                    href="https://www.flaticon.com/br/icones-gratis/gato"
+                    target="_blank"
+                    title="gato ícones"
+                    >Dave Gandy - Flaticon</a
+                >
+            </span>
+
+            <!--Créditos aos ícones do linkdin, instagram e whatsapp-->
+            <span>
+                Ícones da mídias sociais criados por Freepik
+                <a
+                href="https://www.flaticon.com/br/icones-gratis/whatsapp"
+                target="_blank"
+                title="whatsapp ícones"
+                >Flaticon</a
+            >
+            </span>
         </footer>
 
         <script src="scripts/teste.js"></script>
