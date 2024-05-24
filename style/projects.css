@@ -9,13 +9,12 @@
     padding: 10px;
 
     background: linear-gradient(30deg, #60b6bf, #6abfc9);
-
     color: white;
-    font-family: "Raleway";
 }
 
 /*Título do cabeçalho da sessão projetos*/
 .projects-header h2 {
+    font-family: "Raleway";
     font-size: 2rem;
     font-weight: 600;
     line-height: 60px;
@@ -23,6 +22,7 @@
 
 /*Texto do cabeçalho da sessão projetos*/
 .projects-header p {
+    font-family: "Raleway";
     letter-spacing: 3px;
     font-weight: 200;
     width: 75%;
@@ -39,7 +39,6 @@
 /*Imagem do projeto*/
 .project-content img {
     min-height: 207px;
-    border-top: 5px solid var(--cor03);
     background-color: black;
 }
 
@@ -178,8 +177,6 @@
     .projects-header {
         width: 40%;
         padding: 10px;
-
-        background: linear-gradient(30deg, #60b6bf, #6abfc9);
 
         color: white;
         font-family: "Raleway";

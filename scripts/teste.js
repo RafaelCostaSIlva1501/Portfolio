@@ -298,3 +298,7 @@ const nextDifferential = () => {
 
     setTimeout(removeClass, 600);
 };
+
+setInterval(nextCertified, 5500)
+
+setInterval(nextDifferential, 7500)
