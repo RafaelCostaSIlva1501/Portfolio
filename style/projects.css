@@ -150,7 +150,7 @@
     align-items: center;
     padding: 5px;
 
-    background: linear-gradient(30deg, #60b6bf, #6abfc9);
+    background: var(--corBaseEscura);
 }
 
 /*Botões no rodapé da sessão de projetos*/
