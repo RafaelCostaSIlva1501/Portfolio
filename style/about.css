@@ -68,6 +68,33 @@
     border-radius: 50%;
 }
 
+.skills { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills h3 {
+    color: white;
+    text-align: center;
+}
+
+.img-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skills img {
+    width: 11%;
+    filter: grayscale(100%);
+}
+
+.skills img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.3s;
+}
+
 /*Estilos da sessão "sobre" em telas maiores*/
 @media screen and (min-width: 987px) {
     /*Muda a direção da foto e texto*/
