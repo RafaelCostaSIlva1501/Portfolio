@@ -44,6 +44,35 @@
     animation: luzSlogan 1.5s ease-in-out;
 }
 
+.skills { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 0px 10px;
+}
+
+.skills h3 {
+    color: white;
+    text-align: center;
+}
+
+.img-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.skills img {
+    width: 50px;
+    filter: grayscale(100%);
+}
+
+.skills img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.3s;
+}
+
 /*Animação do slogan*/
 @keyframes luzSlogan {
     0% {

@@ -44,12 +44,16 @@
 /*Parágrafos da sessão sobre*/
 #about p {
     line-height: 20px;
-    color: white;
+    color: var(--corTexto);
     margin-bottom: 10px;
 
     font-family: "Raleway";
     font-weight: 400;
     font-size: 1rem;
+}
+
+#about a {
+    color: var(--corTexto);
 }
 
 /*Container das midias sociais*/
@@ -66,35 +70,6 @@
     background-color: white;
     border: 1px solid white;
     border-radius: 50%;
-}
-
-.skills { 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    padding: 0px 10px;
-}
-
-.skills h3 {
-    color: white;
-    text-align: center;
-}
-
-.img-skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.skills img {
-    width: 50px;
-    filter: grayscale(100%);
-}
-
-.skills img:hover {
-    filter: grayscale(0%);
-    transition: filter 0.3s;
 }
 
 /*Estilos da sessão "sobre" em telas maiores*/
