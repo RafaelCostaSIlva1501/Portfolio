@@ -1,372 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfólio | Rafael da Costa Silva</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Rafael da Costa Silva</title>
 
-        <!--Importando ícones do google icons-->
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
+    <!--Importando ícones do google icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-        <!--Estilos gerais-->
-        <style>
-            /*Importando as fontes Roboto e Raleway*/
-            @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body>
+    <!--Cabeçalho dá página-->
+    <header id="header">
+      <img src="img/rafael-dev-logo.png" alt="Rafael Dev Logo" />
 
-            /*Paleta de cores usadas*/
-            :root {
-                --cor01: #f2d541;
-                --cor01A: #f2d54115;
-                --cor02: #d92353;
-                --cor02A: #d92353a1;
-                --cor03: #60b6bf;
-                --cor03A: #60b6bf9d;
-                --cor04: #1d803a;
-                --cor04A: #1d803b6c;
-                --corBaseEscura: #212529;
-                --corBaseEscura2: #212529f3;
-                --corBaseClara: #788a9c;
-                --corTexto: #d4d4d4;
-            }
+      <nav class="menu">
+        <button class="button-menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
 
-            /*Configurações globais*/
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: "Roboto";
-            }
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+      </nav>
 
-            /*Configurações do corpo do site*/
-            body {
-                max-width: 100vw;
-                background-image: url(img/fundo.jpg);
-            }
-        </style>
+      <button class="button-menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
 
-        <!--Estilos do cabeçalho-->
-        <link rel="stylesheet" href="style/header.css" />
+    <main id="home">
+      <img src="img/eu.jpg" alt="Minha foto de perfil" />
 
-        <!--Estilos da sessão "inicial"-->
-        <link rel="stylesheet" href="style/home.css" />
+      <div>
+        <h1>Rafael Costa Silva</h1>
 
-        <!--Estilos da sessão "sobre"-->
-        <link rel="stylesheet" href="style/about.css" />
+        <p>
+          Desenvolvedor Front-End em busca de me tornar Full-Stack. Apaixonado
+          por tecnologia, estudo constantemente e crio projetos próprios para
+          evoluir e acompanhar as tendências do mercado.
+        </p>
 
-        <!--Estilos da sessão "projetos"-->
-        <link rel="stylesheet" href="style/projects.css" />
+        <div>
+          <a href="">
+            <img
+              src="img/midia-icons/instagram-icon.png"
+              alt="Instagram Logo"
+            />
+          </a>
 
-        <!--Estilos da sessão de "certificações e difereciais"-->
-        <link rel="stylesheet" href="style/certification.css" />
+          <a href="">
+            <img src="img/midia-icons/whatsapp-icon.png" alt="Whatsapp Logo" />
+          </a>
 
-        <!--Estilos do rodapé-->
-        <link rel="stylesheet" href="style/footer.css" />
-    </head>
-    <body>
-        <!--Cabeçalho dá página-->
-        <header class="home-header">
-            <!--Título principal em telas maiores-->
-            <section class="intro intro-desktop">
-                <h1>Rafael da Costa Silva</h1>
-                <p>DESENVOLVEDOR ● FRONT-END</p>
-            </section>
+          <a href="">
+            <img src="img/midia-icons/github-icon.png" alt="Github Logo" />
+          </a>
 
-            <!--Botão do menu-->
-            <button type="menu">
-                <span class="material-symbols-outlined" id="btnMenu">menu</span>
-            </button>
+          <a href="">
+            <img src="img/midia-icons/linkedin-icon.png" alt="Linkedin Logo" />
+          </a>
+        </div>
+      </div>
+    </main>
 
-            <!--Menu de navegação-->
-            <nav id="menu">
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#certification">Certificações</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
+    <section id="skills">
+      <article>
+        <div>
+          <h2>FRONT-END</h2>
+          <div>
+            <img src="img/icons/html5.png" alt="HTML5 logo" />
+            <img src="img/icons/css3.png" alt="CSS3 logo" />
+            <img src="img/icons/js.png" alt="JavaScript logo" />
+            <img src="img/icons/react.png" alt="React.js logo" />
+            <img src="img/icons/tailwind.png" alt="Tailwind logo" />
+          </div>
+        </div>
+        <p>
+          Tecnologias que transformam ideias em interfaces intuitivas e
+          responsivas. Do layout à interatividade, cada ferramenta contribui
+          para uma experiência visual fluida e envolvente.
+        </p>
+      </article>
 
-        <!--Sessão inicial dá pagina-->
-        <main id="home">
-            <!--Título principal para telas menores-->
-            <section class="intro intro-mobile">
-                <h1>Rafael da Costa Silva</h1>
-                <p>DESENVOLVEDOR ● FRONT-END</p>
-            </section>
+      <article>
+        <div>
+          <h2>BACK-END</h2>
+          <div>
+            <img src="img/icons/nodejs.png" alt="Node.js logo" />
+            <img src="img/icons/mysql.png" alt="MySQL logo" />
+            <img src="img/icons/expressjs.png" alt="Express.js logo" />
+          </div>
+        </div>
+        <p>
+          O núcleo da aplicação, responsável pelo processamento, lógica e
+          comunicação com o banco de dados. Aqui, os dados ganham estrutura e as
+          funcionalidades acontecem nos bastidores.
+        </p>
+      </article>
 
-            <!--Meu slogan-->
-            <section class="slogan">
-                <!--div com animação-->
-                <div class="animation-slogan">
-                    <span class="traduzindo"> TRADUZINDO </span>
+      <article>
+        <div>
+          <h2>VERSIONAMENTO</h2>
+          <div>
+            <img src="img/icons/git.png" alt="Git logo" />
+            <img src="img/icons/github.png" alt="Github logo" />
+          </div>
+        </div>
+        <p>
+          Manter o controle do código é essencial. Com ferramentas de
+          versionamento, é possível registrar mudanças, colaborar em equipe e
+          garantir a integridade do projeto em qualquer fase do desenvolvimento.
+        </p>
+      </article>
 
-                    <span class="criatividade"> CRIATIVIDADE </span>
+      <article>
+        <div>
+          <h2>PRÁTICAS DE PROGRAMAÇÃO</h2>
+        </div>
+        <p>
+          Escrever código vai além de fazê-lo funcionar. Aplicar boas práticas
+          como modularização, código limpo e princípios sólidos garante
+          legibilidade, escalabilidade e manutenção eficiente no longo prazo.
+        </p>
+      </article>
+    </section>
 
-                    <span class="codigo"> EM CÓDIGO </span>
-                </div>
-            </section>
-
-            <!--Minhas Skills-->
-            <section class="skills">
-                <h3>Minhas Skills</h3>
-                <div class="img-skills">
-                    <img src="img/html5.png" alt="Logo Html" />
-                    <img src="img/css3.png" alt="Logo Css" />
-                    <img src="img/js.png" alt="Logo Javascript" />
-                    <img src="img/git.png" alt="Logo Git" />
-                    <img src="img/github.png" alt="Logo Github" />
-                    <img src="img/react.png" alt="Logo React" />
-                    <img src="img/tailwind.png" alt="Logo Tailwind" />
-                    <img src="img/nodejs.png" alt="Logo Node js">
-                </div>
-            </section>
-        </main>
-
-        <!--Sessão sobre mim-->
-        <section id="about">
-            <!--Título da sessão-->
-            <h2>SOBRE MIM</h2>
-
-            <!--Conteúdo da sessão-->
-            <section class="content-sobre">
-                <!--Container com minha foto e mídias sociais-->
-                <div class="img-sobre">
-                    <!--Minha foto-->
-                    <img src="img/eu.jpg" alt="Minha foto" />
-
-                    <!--Container com as mídias sociais-->
-                    <div class="midias">
-                        <!--Github-->
-                        <a href="https://github.com/RafaelCostaSIlva1501">
-                            <img
-                                src="img/midia-icons/github-logo.png"
-                                alt="Github"
-                            />
-                        </a>
-
-                        <!--Linkedin-->
-                        <a
-                            href="https://www.linkedin.com/in/rafael-da-costa-silva-29853b287/"
-                        >
-                            <img
-                                src="img/midia-icons/linkedin-logo.png"
-                                alt="Linkedin"
-                            />
-                        </a>
-
-                        <!--Instagram-->
-                        <a href="https://www.instagram.com/rafaelalloces/">
-                            <img
-                                src="img/midia-icons/instagram-logo.png"
-                                alt="Instagram"
-                            />
-                        </a>
-
-                        <!--Whatsapp-->
-                        <a href="https://wa.me/5511953087026" target="_blank">
-                            <img
-                                src="img/midia-icons/whatsapp-logo.png"
-                                alt="Whatsapp"
-                            />
-                        </a>
-                    </div>
-                </div>
-
-                <!--Texto sobre mim-->
-                <div class="txt-sobre">
-                    <p>
-                        <span style="font-size: 30px">Olá</span>, meu nome é
-                        Rafael, tenho 20 anos e sou um entusiasta do
-                        desenvolvimento Front-End, além de músico nas horas
-                        vagas.
-                    </p>
-
-                    <p>
-                        Minha jornada na programação começou quando assisti um vídeo do <a href="https://www.youtube.com/watch?v=Ptbk2af68e8" target="_blank">Curso em Vídeo</a> sobre JavaScript, e desde então, fiquei apaixonado pelo mundo do desenvolvimento. Iniciei meus estudos na área do <strong>desenvolvimento front-end</strong> com grande desejo de evolução, e estou determinado a me tornar um Programador Full-Stack no futuro.
-                    </p>
-
-                    <p>
-                        Atualmente, estou aprimorando minhas habilidades por meio do conteúdo disponível na web e pela <a href="https://www.cursoemvideo.com/" target="_blank">plataforma do Curso em Vídeo</a> onde já conquistei certificações em alguns cursos. Além disso, crio meus próprios projetos para exercitar minha criatividade e consolidar meus conhecimentos.
-                    </p>
-
-                    <p>
-                        Acredito que o desenvolvimento Front-End é uma área em constante evolução, isso me motiva a sempre buscar novos desafios e oportunidades para crescer como desenvolvedor.
-                    </p>
-                </div>
-            </section>
-        </section>
-
-        <!--Sessão projetos-->
-        <section id="projects">
-            <!--Cabeçalho da sessão de projetos-->
-            <header class="projects-header">
-                <!--Título da sessão de projetos-->
-                <h2>Projetos</h2>
-                <!--Texto do cabeçalho da sessão de projetos-->
-                <p>
-                    CONFIRA ALGUNS DOS PROJETOS QUE DESENVOLVI, UTILIZANDO AS
-                    TECNOLOGIAS COM AS QUAIS TRABALHO.
-                </p>
-            </header>
-
-            <!--Conteúdo da sessão projetos-->
-            <section class="project-content">
-                <!--Imagem do projeto-->
-                <img id="projectImg" />
-
-                <!--Detalhes do projeto-->
-                <div class="project-details">
-                    <!--Título do projeto-->
-                    <h3 id="projectTitle"></h3>
-
-                    <!--Tecnologias usadas no projeto (Tags)-->
-                    <div class="container-tags" id="projectTag"></div>
-
-                    <!--Texto que fala sobre o projeto-->
-                    <p id="projectInfo"></p>
-
-                    <!--Links do projeto-->
-                    <div class="container-links">
-                        <!--Código fonte do projeto no github-->
-                        <a id="projectCode" target="_blank">
-                            <span class="material-symbols-outlined">
-                                code
-                            </span>
-                            Ver código
-                        </a>
-
-                        <!--Vizualização do projeto-->
-                        <a id="projectView" target="_blank">
-                            <span class="material-symbols-outlined">
-                                devices
-                            </span>
-                            Ver projeto
-                        </a>
-                    </div>
-                </div>
-
-                <!--Rodapé da sessão projetos-->
-                <footer class="projects-footer">
-                    <!--Botão para ver projeto anterior-->
-                    <button onclick="backProject()">
-                        <span class="material-symbols-outlined"
-                            >arrow_back</span
-                        >
-                    </button>
-
-                    <!--Botão para ver o próximo projeto-->
-                    <button onclick="nextProject()">
-                        <span class="material-symbols-outlined"
-                            >arrow_forward</span
-                        >
-                    </button>
-                </footer>
-            </section>
-        </section>
-
-        <!--Sessão de certificações e diferenciais-->
-        <section id="certification">
-            <!--Card com minhas certificações-->
-            <div class="card">
-                <!--Título do card-->
-                <h3>CERTIFICAÇÕES</h3>
-
-                <!--Conteúdo do card de certificações-->
-                <div
-                    class="card-content"
-                    id="certified"
-                    style="justify-content: space-between"
-                >
-                    <!--Título da certificação exibida-->
-                    <h4 id="certifiedTitle"></h4>
-                    <!--Sobre a certificação-->
-                    <p id="certifiedInfo"></p>
-                    <!--Link para ver certificação-->
-                    <a id="certifiedView" target="_blank">Ver Certificação</a>
-                </div>
-
-                <!--Botão para ver certificação anterior-->
-                <button class="btn-left" onclick="backCertified()">
-                    <span class="material-symbols-outlined">
-                        chevron_left
-                    </span>
-                </button>
-
-                <!--Botão para ver a próxima certificação-->
-                <button class="btn-right" onclick="nextCertified()">
-                    <span class="material-symbols-outlined">
-                        chevron_Right
-                    </span>
-                </button>
-            </div>
-
-            <!--Card com os meus diferenciais-->
-            <div class="card">
-                <!--Título do card-->
-                <h3>DIFERENCIAIS</h3>
-
-                <!--Conteúdo do card de diferenciais-->
-                <div class="card-content" id="differential">
-                    <!--Título do diferencial exibido-->
-                    <h4 id="differentialTitle"></h4>
-                    <!--Sobre o diferencial-->
-                    <p id="differentialInfo"></p>
-                </div>
-
-                <!--Botão para ver o diferencial anterior-->
-                <button class="btn-left" onclick="backDifferential()">
-                    <span class="material-symbols-outlined">
-                        chevron_left
-                    </span>
-                </button>
-
-                <!--Botão para ver o próximo diferencial-->
-                <button class="btn-right" onclick="nextDifferential()">
-                    <span class="material-symbols-outlined">
-                        chevron_Right
-                    </span>
-                </button>
-            </div>
-        </section>
-
-        <!--Rodapé da página-->
-        <footer id="footer">
-            <!--Link para meu whatsapp-->
-            <span>
-                Portfólio desenvolvido por
-                <a href="https://wa.me/5511953087026" target="_blank"
-                    >Rafael da Costa Silva</a
-                >
-            </span>
-
-            <!--Crédito do ícone do github-->
-            <span>
-                Ícone github por
-                <a
-                    href="https://www.flaticon.com/br/icones-gratis/gato"
-                    target="_blank"
-                    title="gato ícones"
-                    >Dave Gandy - Flaticon</a
-                >
-            </span>
-
-            <!--Créditos aos ícones do linkdin, instagram e whatsapp-->
-            <span>
-                Ícones da mídias sociais criados por Freepik
-                <a
-                    href="https://www.flaticon.com/br/icones-gratis/whatsapp"
-                    target="_blank"
-                    title="whatsapp ícones"
-                    >Flaticon</a
-                >
-            </span>
-        </footer>
-
-        <script src="scripts/teste.js"></script>
-    </body>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
 </html>
+
+<!---->

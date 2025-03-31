@@ -1,0 +1,11 @@
+/*Estilos da sessão "certificações e diferenciais" em telas maiores*/
+@media screen and (min-width: 800px) {
+  #home {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  #home > div {
+    width: 60%;
+  }
+}

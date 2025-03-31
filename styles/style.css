@@ -1,0 +1,250 @@
+/*Importando as fontes Roboto e Raleway*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*Configurações globais*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+/*Configurações do corpo do site*/
+body {
+  max-width: 100vw;
+
+  background: linear-gradient(45deg, #171a24, #323950, #424d70);
+}
+
+/*----------CABEÇALHO----------*/
+
+header {
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px 30px;
+
+  background-color: #171a24e8;
+  border-bottom: 1px solid #ffffff85;
+
+  overflow-y: hidden;
+
+  transition: all 0.3s;
+
+  z-index: 10;
+}
+
+header img {
+  width: 200px;
+}
+
+header span {
+  color: #ccccccf3;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 0;
+  height: 100%;
+  padding: 20px 0px;
+
+  background-color: #090b0f;
+  border-left: 1px solid #ccccccf3;
+
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+
+header nav a {
+  width: min-content;
+  padding: 5px 7px;
+
+  border-radius: 5px;
+
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 18px;
+
+  transition: all 0.3s;
+}
+
+header nav a:hover {
+  background-color: #f5f5f5;
+  color: #171a24;
+}
+
+header nav button {
+  display: flex;
+  width: max-content;
+  margin-left: auto;
+}
+
+header button {
+  display: flex;
+
+  background: none;
+  border: none;
+  border-radius: 2px;
+
+  color: #f5f5f5;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+header button:hover {
+  transform: scale(1.2);
+}
+
+/*----------Home----------*/
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: center;
+  gap: 20px;
+
+  height: 100vh;
+  max-height: 100vh;
+  padding: 30px;
+}
+
+#home > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#home h1 {
+  color: #ccccccf3;
+  font-size: 2rem;
+}
+
+#home p {
+  color: #ccccccf3;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#home div a {
+  text-decoration: none;
+}
+
+#home div a img {
+  width: 40px;
+  margin-right: 7px;
+  padding: 5px;
+
+  background-color: #ffffff42;
+  border-radius: 5px;
+
+  filter: invert(1);
+
+  transition: all 0.3s;
+}
+
+#home div a img:hover {
+  transform: scale(1.1);
+}
+
+#home > img {
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*----------SKILLS----------*/
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+
+  padding: 30px;
+}
+
+#skills article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+
+  margin: 0 auto;
+  padding: 10px;
+
+  background: linear-gradient(45deg, #141618f6, #16181b5d);
+  border: 2px solid #424d7077;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+#skills article:hover {
+  background: linear-gradient(45deg, #1a1d20, #1e2227);
+  border-color: #5a6b90;
+  transition: all 0.3s ease-in-out;
+}
+
+#skills article div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#skills article h2 {
+  color: #f5f5f5;
+}
+
+#skills article img {
+  width: 25px;
+  height: 25px;
+}
+
+#skills article p {
+  color: #ccccccf3;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/
+
+/*----------#----------*/

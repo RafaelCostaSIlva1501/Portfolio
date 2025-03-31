@@ -1,154 +1,349 @@
-document.getElementById("btnMenu").addEventListener("click", function () {
-    document.getElementById("menu").classList.toggle("open");
+import { DOM } from "./DOM.js";
+
+let scroll = 0;
+
+window.addEventListener("scroll", () => {
+  let scrollCurrent = window.scrollY;
+
+  if (scrollCurrent > scroll) {
+    DOM.header.style.height = "0px";
+    DOM.header.style.padding = "0px 30px";
+  } else if (scrollCurrent < scroll) {
+    DOM.header.style.height = "auto";
+    DOM.header.style.padding = "20px 30px";
+  }
+
+  scroll = scrollCurrent;
 });
 
-const btnShowProject = document.querySelectorAll(".btn-show-project");
-const showProject = document.querySelectorAll(".show-project");
+let menuON = false;
 
-showProject[0].style.display = "flex";
+// Adiciona o evento de clique aos botões
+DOM.btnMenu.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Alterna o estado do menu
+    menuON = !menuON;
 
-//Exibe e esconde os projetos exibidos no painel
-btnShowProject.forEach(function (btn, index) {
-    btn.addEventListener("click", function () {
-        openProjectsPanel();
-        showProject.forEach((show) => (show.style.display = "none"));
-        showProject[index].style.display = "flex";
-    });
+    // Se o menu estiver aberto, fecha. Se estiver fechado, abre.
+    DOM.menu.style.width = menuON ? "220px" : "0px";
+    DOM.menu.style.padding = menuON ? "20px 20px" : "20px 0px";
+  });
 });
 
-//Abre o painel de exibição de projetos
-const openProjectsPanel = () => {
-    document.getElementById("showProject").style.display = "flex";
-};
-
-//Fecha o painel de exibição de projetos
-const closeProjectsPanel = () => {
-    document.getElementById("showProject").style.display = "none";
-};
-
-const btnReplaceProject = document.querySelectorAll(".btn-replace-project");
-const projectContent = document.querySelectorAll(".show-project-content");
-
-projectContent[0].style.display = "flex";
-
-btnReplaceProject.forEach(function (btn, index) {
-    btn.addEventListener("click", function () {
-        projectContent.forEach((content) => (content.style.display = "none"));
-        projectContent[index].style.display = "flex";
-    });
+/*
+// Abre e fecha o menu inicial
+document.getElementById("btnMenu").addEventListener("click", () => {
+  document.getElementById("menu").classList.toggle("open");
 });
 
-let infoIndex = 0;
-
-const replaceInfoProject = (classImgTxt) => {
-    const replaceImgTxt = document.querySelectorAll(classImgTxt);
-
-    replaceImgTxt.forEach((replace) => (replace.style.display = "none"));
-
-    if (infoIndex < 0) {
-        infoIndex = replaceImgTxt.length - 1;
-    } else if (infoIndex > replaceImgTxt.length - 1) {
-        infoIndex = 0;
-    }
-
-    replaceImgTxt[infoIndex].style.display = "block";
-};
-
-const backInfo = (classImgTxt) => {
-    infoIndex = infoIndex - 1;
-    replaceInfoProject(classImgTxt);
-};
-
-const nextInfo = (classImgTxt) => {
-    infoIndex = infoIndex + 1;
-    replaceInfoProject(classImgTxt);
-};
-
-const replaceSlide = (slideClass, btnSlideClass) => {
-    const slide = document.querySelectorAll(slideClass);
-    const btnSlide = document.querySelectorAll(btnSlideClass);
-
-    btnSlide.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-            slide.forEach((slide) => (slide.style.display = "none"));
-            slide[index].style.display = "flex";
-
-            btnSlide.forEach((btn) => (btn.style.border = "none"));
-            btn.style.border = "2px solid black";
-        });
-    });
-
-    btnSlide[0].style.border = "2px solid black";
-};
-
-replaceSlide(".certification-slide", ".certification-btn");
-
-replaceSlide(".diferencial-slide", ".diferencial-btn");
-
+// Informações dos projetos guardados em objetos
 const projects = [
-    //Snake Game
-    {
-        title: "Snake Game",
-        img: [
-            "../img/snake-game-img/snakeThumb1.png",
-            "../img/snake-game-img/snakeThumb2.png",
-            "../img/snake-game-img/snakeThumb3.png",
-        ],
-        infos: [
-            "O jogo apresenta uma estrutura HTML, com seções para configurações, tela do jogo, e botões de controle. O CSS é utilizado para estilizar os elementos visuais do jogo, como botões, menu e canvas.",
+  // Mini Games
+  {
+    title: "Mini Games",
+    img: "img/project-img/thumb-mini-games.png",
+    tag: [],
+    info: "Aqui você encontrará projetos criativos que desenvolvi, explorando diferentes ideias e mecânicas. Sinta-se à vontade para experimentar e se divertir com cada um deles!",
+    code: "https://github.com/RafaelCostaSIlva1501/Rpg-Plus",
+    view: "https://rpg-plus.vercel.app/",
+  },
 
-            "O JavaScript controla toda a lógica do jogo, incluindo movimento da cobra, detecção de colisões, geração de comida, pontuação e configurações. Também responde às interações do usuário, como cliques em botões e teclas do teclado, para controlar a cobrinha e interagir com o jogo.",
-
-            "O jogo oferece uma variedade de configurações que podem ser ajustadas pelo jogador, como velocidade da cobra, cores da cobra e da comida, e estilos de controle. O jogador pode pausar e retomar o jogo a qualquer momento, além de reiniciá-lo após o fim da partida.",
-        ],
-    },
-
-    //Paint
-    {
-        title: "Paint",
-        img: [
-            "../img/paint-img/paintThumb1.png",
-            "../img/paint-img/paintThumb2.png",
-            "../img/paint-img/paintThumb3.png",
-        ],
-        infos: [
-            "A página permite aos usuários desenhar livremente no canvas usando diferentes ferramentas, como pincel, balde de tinta e borracha.",
-
-            "Além disso, é possível ajustar o tamanho do pincel e escolher cores personalizadas.",
-
-            "Os desenhos podem ser salvos localmente e posteriormente visualizados na galeria de imagens integrada.",
-        ],
-    },
-
-    //Breakout game
-    {
-        title: "Breakout Game",
-        img: [],
-        infos: [],
-    },
-
-    //Lista de Tarefas
-    {
-        title: "",
-        img: [],
-        infos: [],
-    },
-
-    //Chat Online
-    {
-        title: "",
-        img: [],
-        infos: [],
-    },
+  // Rpg Plus
+  {
+    title: "RPG +",
+    img: "img/project-img/rpg-plus.jpg",
+    tag: ["React", "JavaScript", "Css"],
+    info: "RPG+ é uma plataforma de streaming que mergulha os entusiastas de rpg em um mundo de aventuras, narrativas envolventes e entretenimento imersivo. O coração do projeto reside em sua vasta biblioteca de episódios de RPGs, cuidadosamente organizados em categorias que abrangem uma ampla gama de gêneros, desde as aventuras de fantasia épica até os cenários de ficção científica futurista, há algo para todos os gostos e preferências.",
+    code: "https://github.com/RafaelCostaSIlva1501/Rpg-Plus",
+    view: "https://rpg-plus.vercel.app/",
+  },
+  // Chat Online
+  {
+    title: "Chat Online",
+    img: "img/project-img/chat-online.jpg",
+    tag: ["Html", "Css", "JavaScript", "Node JS"],
+    info: "Meu primeiro projeto fullstack é um chat online simples e intuitivo. Ele permite que usuários se conectem instantaneamente e conversem em tempo real. Com uma interface limpa e amigável, os usuários podem trocar mensagens facilmente, proporcionando uma experiência de comunicação fluida e direta.",
+    code: "https://github.com/RafaelCostaSIlva1501/Chat-Online",
+    view: "https://chat-frontend-d9tu.onrender.com/",
+  },
+  // Snake Game
+  {
+    title: "Snake Game",
+    img: "img/project-img/snake-game.jpg",
+    tag: ["Html", "Css", "JavaScript"],
+    info: "Snake Game é uma versão moderna do clássico jogo da cobrinha. Além da jogabilidade tradicional, o jogo oferece uma interface de configurações que permite aos jogadores ajustarem a velocidade da cobra, escolherem cores personalizadas e controlarem outras funções, proporcionando uma experiência de jogo altamente personalizável.",
+    code: "https://github.com/RafaelCostaSIlva1501/Snake-Game",
+    view: "https://rafaelcostasilva1501.github.io/Snake-Game/",
+  },
+  // Paint
+  {
+    title: "Paint",
+    img: "img/project-img/paint.jpg",
+    tag: ["Html", "Css", "JavaScript"],
+    info: "Com este projeto de pintura interativa, você pode soltar a criatividade desenhando livremente, ajustando o tamanho do pincel, usando a borracha e o balde de tinta. Além disso, é possível salvar suas obras de arte em uma galeria pessoal e fazer o download das criações para compartilhar com o mundo!",
+    code: "https://github.com/RafaelCostaSIlva1501/Paint",
+    view: "https://rafaelcostasilva1501.github.io/Paint/",
+  },
 ];
 
-document.getElementById("replaceImg").addEventListener("mouseenter", function() {
-    document.getElementById("imgGithub").src = "img/midia-icons/github-logo.png";
-    console.log()
-});
+// Função que exibe os projetos
+const showProjects = (index) => {
+  const title = document.getElementById("projectTitle"); // Título
+  const img = document.getElementById("projectImg"); // Imagem
+  const tag = document.getElementById("projectTag"); // Tecnologias
+  const info = document.getElementById("projectInfo"); // Sobre
+  const code = document.getElementById("projectCode"); // Código fonte
+  const view = document.getElementById("projectView"); // Visualização
 
-// Adicione este bloco de código se você deseja restaurar a imagem original quando o mouse sai do link
-document.getElementById("replaceImg").addEventListener("mouseleave", function() {
-    document.getElementById("imgGithub").src = "img/midia-icons/github-logo-white.png";
-});
+  // Limpa o título anterior e coloca outro
+  title.innerHTML = "";
+  title.innerHTML = projects[index].title;
 
+  // Limpa a imagem anterior e coloca outra
+  img.src = "";
+  img.src = projects[index].img;
+
+  // Limpa as tags anteriores e coloca outras
+  tag.innerHTML = "";
+  projects[index].tag.forEach((tagName) => {
+    const span = document.createElement("span");
+    span.textContent = tagName;
+    tag.appendChild(span);
+  });
+
+  // Limpa as informações anteriores e coloca outras
+  info.innerHTML = "";
+  info.innerHTML = projects[index].info;
+
+  // Limpa o link do código fonte anterior e coloca outro
+  code.href = "";
+  code.href = projects[index].code;
+
+  // Limpa o link do projeto anterior e coloca outro
+  view.href = "";
+  view.href = projects[index].view;
+};
+
+// Começa exibindo o primeiro projeto
+showProjects(0);
+
+//Define o índice inicialmente como 0
+let projectIndex = 0;
+
+// Função para exibir o projeto anterior
+const backProject = () => {
+  // Tira 1 do projectIndex
+  projectIndex = projectIndex - 1;
+
+  // Se o valor de projectIndex estiver menor que zero, ele vai para o valor máximo de acordo com a quantidade de elementos dentro do array "projects"
+  if (projectIndex < 0) {
+    projectIndex = projects.length - 1;
+  }
+
+  // Exibe um projeto de acordo com o seu índice
+  showProjects(projectIndex);
+};
+
+// Função para exibir o próximo projeto
+const nextProject = () => {
+  // Adiciona 1 ao projectIndex
+  projectIndex = projectIndex + 1;
+
+  // Se o valor de projectIndex estiver maior que o valor máximo de acordo com a quantidade de elementos dentro do array "projects", volta para o primeiro projeto
+  if (projectIndex > projects.length - 1) {
+    projectIndex = 0;
+  }
+
+  // Exibe um projeto de acordo com o seu índice
+  showProjects(projectIndex);
+};
+
+// Informações dos certificados guardados em objetos
+const certified = [
+  {
+    title: "Certificado de HTML5 e CSS3",
+    info: "Certificado emitido pelo Curso em Vídeo. Este curso me proporcionou uma base sólida em HTML e CSS, incluindo design responsivo e html semântico.",
+    view: "",
+  },
+  {
+    title: "Certificado de JavaScript",
+    info: "Certificado emitido pelo Curso em Vídeo. Este curso me proporcionou uma base sólida em JavaScript, como estruturas de controle, manipulação do DOM e iteração com eventos.",
+    view: "",
+  },
+  {
+    title: "Certificado de AWS",
+    info: "O projeto 'Teu Futuro re/start' me proporcionou uma base sólida em computação em nuvem e desenvolvimento de habilidades de Soft Skills.",
+    view: "",
+  },
+];
+
+// Função que exibe os certificados
+const showCertified = (index) => {
+  const title = document.getElementById("certifiedTitle"); // Título
+  const info = document.getElementById("certifiedInfo"); // Informações
+  const view = document.getElementById("certifiedView"); // Visualização
+
+  // Limpa o título anterior e coloca outro
+  title.innerHTML = "";
+  title.innerHTML = certified[index].title;
+
+  // Limpa as informações anteriores e coloca outras
+  info.innerHTML = "";
+  info.innerHTML = certified[index].info;
+
+  // Limpa o link do certificado anterior e coloca outro
+  view.href = "";
+  view.href = certified[index].view;
+};
+
+// Começa exibindo o primeiro certificado
+showCertified(0);
+
+// Obtém o elemento que contém os certificados
+const certifiedTag = document.getElementById("certified");
+// Define o índice dos certificados inicialmente como 0
+let certifiedIndex = 0;
+
+// Função para exibir o certificado anterior
+const backCertified = () => {
+  // Tira 1 do certifiedIndex
+  certifiedIndex = certifiedIndex - 1;
+
+  // Se o valor de certifiedIndex estiver menor que zero, ele vai para o valor máximo de acordo com a quantidade de elementos dentro do array "certified"
+  if (certifiedIndex < 0) {
+    certifiedIndex = certified.length - 1;
+  }
+
+  // Exibe um certificado de acordo com o seu índice
+  showCertified(certifiedIndex);
+
+  // Adiciona animação para transição à esquerda
+  certifiedTag.classList.add("animationR");
+
+  // Remove a animação após um tempo
+  const removeClass = () => {
+    certifiedTag.classList.remove("animationR");
+  };
+
+  setTimeout(removeClass, 600);
+};
+
+// Função para exibir o próximo certificado
+const nextCertified = () => {
+  // Adiciona 1 ao certifiedIndex
+  certifiedIndex = certifiedIndex + 1;
+
+  // Se o valor de certifiedIndex estiver maior que o valor máximo de acordo com a quantidade de elementos dentro do array "certified", volta para o primeiro certificado
+  if (certifiedIndex > certified.length - 1) {
+    certifiedIndex = 0;
+  }
+
+  // Exibe um certificado de acordo com o seu índice
+  showCertified(certifiedIndex);
+
+  // Adiciona animação para transição à direita
+  certifiedTag.classList.add("animationL");
+
+  // Remove a animação após um tempo
+  const removeClass = () => {
+    certifiedTag.classList.remove("animationL");
+  };
+
+  setTimeout(removeClass, 600);
+};
+
+// Informações dos diferenciais guardados em objetos
+const differential = [
+  {
+    title: "Código limpo",
+    info: "Prezo por um código limpo e bem comentado, isso facilita a compreensão, colaboração e manutenção, tornando o desenvolvimento mais eficiente e escalável.",
+  },
+  {
+    title: "Comunicação efetiva",
+    info: "Boa capacidade de expressar ideias e soluções complexas de forma simples e compreensível para pessoas que não são programadoras",
+  },
+  {
+    title: "Aprendizado contínuo",
+    info: "Sempre em busca de conhecer novas tecnologias e tendências para melhorar minhas capacidades como desenvolvedor.",
+  },
+  {
+    title: "Experiência em UI e UX",
+    info: "Usabilidade, estética e experiência do usuário, me permitem criar interfaces e produtos mais atrativos e funcionais.",
+  },
+];
+
+// Função que exibe os diferenciais
+const showDifferential = (index) => {
+  const title = document.getElementById("differentialTitle"); // Título
+  const info = document.getElementById("differentialInfo"); // Informações
+
+  // Limpa o título anterior e coloca outro
+  title.innerHTML = "";
+  title.innerHTML = differential[index].title;
+
+  // Limpa as informações anteriores e coloca outras
+  info.innerHTML = "";
+  info.innerHTML = differential[index].info;
+};
+
+// Começa exibindo o terceiro diferencial
+showDifferential(2);
+
+// Obtém o elemento que contém os diferenciais
+const differentialTag = document.getElementById("differential");
+// Define o índice dos diferenciais inicialmente como 0
+let differentialIndex = 0;
+
+// Função para exibir o diferencial anterior
+const backDifferential = () => {
+  // Tira 1 do differentialIndex
+  differentialIndex = differentialIndex - 1;
+
+  // Se o valor de differentialIndex estiver menor que zero, ele vai para o valor máximo de acordo com a quantidade de elementos dentro do array "differential"
+  if (differentialIndex < 0) {
+    differentialIndex = differential.length - 1;
+  }
+
+  // Exibe um diferencial de acordo com o seu índice
+  showDifferential(differentialIndex);
+
+  // Adiciona animação para transição à esquerda
+  differentialTag.classList.add("animationR");
+
+  // Remove a animação após um tempo
+  const removeClass = () => {
+    differentialTag.classList.remove("animationR");
+  };
+
+  setTimeout(removeClass, 600);
+};
+
+// Função para exibir o próximo diferencial
+const nextDifferential = () => {
+  // Adiciona 1 ao differentialIndex
+  differentialIndex = differentialIndex + 1;
+
+  // Se o valor de differentialIndex estiver maior que o valor máximo de acordo com a quantidade de elementos dentro do array "differential", volta para o primeiro diferencial
+  if (differentialIndex > differential.length - 1) {
+    differentialIndex = 0;
+  }
+
+  // Exibe um diferencial de acordo com o seu índice
+  showDifferential(differentialIndex);
+
+  // Adiciona animação para transição à direita
+  differentialTag.classList.add("animationL");
+
+  // Remove a animação após um tempo
+  const removeClass = () => {
+    differentialTag.classList.remove("animationL");
+  };
+
+  setTimeout(removeClass, 600);
+};
+
+setInterval(nextCertified, 5500);
+
+setInterval(nextDifferential, 7500);
+
+*/
