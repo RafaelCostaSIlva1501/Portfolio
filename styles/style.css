@@ -16,6 +16,10 @@ body {
   background: linear-gradient(45deg, #171a24, #323950, #424d70);
 }
 
+html {
+  font-size: 0.8rem;
+}
+
 /*----------CABEÇALHO----------*/
 
 header {
@@ -75,7 +79,7 @@ header nav a {
 
   color: #f5f5f5;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.5rem;
 
   transition: all 0.3s;
 }
@@ -166,7 +170,7 @@ header button:hover {
 #home > img {
   display: block;
 
-  max-width: 50%;
+  max-width: 25%;
   max-width: 250px;
   height: auto;
 
@@ -228,6 +232,7 @@ header button:hover {
 
 #skills article p {
   color: #ccccccf3;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.3;
 }
