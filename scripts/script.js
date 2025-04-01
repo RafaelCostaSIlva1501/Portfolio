@@ -1,4 +1,5 @@
 import { DOM } from "./DOM.js";
+import { projects } from "./projects.js";
 
 let scroll = 0;
 
@@ -28,6 +29,41 @@ DOM.btnMenu.forEach((btn) => {
     DOM.menu.style.width = menuON ? "220px" : "0px";
     DOM.menu.style.padding = menuON ? "20px 20px" : "20px 0px";
   });
+});
+
+const createElement = (tag) => {
+  const element = document.createElement(tag);
+  return element;
+};
+
+projects.forEach((e) => {
+  const article = createElement("article");
+  DOM.projects.appendChild(article);
+
+  const img = createElement("img");
+  img.src = `/img/project/${e.img}.png`;
+  article.appendChild(img);
+
+  const h2 = createElement("h2");
+  h2.textContent = e.title;
+  article.appendChild(h2);
+
+  const p = createElement("p");
+  p.textContent = e.text;
+  article.appendChild(p);
+
+  const div = createElement("div");
+  article.appendChild(div);
+
+  const github = createElement("a");
+  github.href = e.github;
+  github.innerHTML = `<i class="fa-brands fa-github"></i> <span>Github</span>`;
+  div.appendChild(github);
+
+  const view = createElement("a");
+  view.href = e.view;
+  view.innerHTML = `<span>Ver Projeto</span> <i class="fa-solid fa-eye"></i>`;
+  div.appendChild(view);
 });
 
 /*
