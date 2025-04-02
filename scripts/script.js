@@ -41,16 +41,20 @@ projects.forEach((e) => {
   DOM.projects.appendChild(article);
 
   const img = createElement("img");
-  img.src = `/img/project/${e.img}.png`;
+  img.src = `/img/project/${e.img}.jpg`;
+  img.alt = `${e.title} banner`;
   article.appendChild(img);
+
+  const section = createElement("section")
+  article.appendChild(section)
 
   const h2 = createElement("h2");
   h2.textContent = e.title;
-  article.appendChild(h2);
+  section.appendChild(h2);
 
   const p = createElement("p");
   p.textContent = e.text;
-  article.appendChild(p);
+  section.appendChild(p);
 
   const div = createElement("div");
   article.appendChild(div);

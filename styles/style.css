@@ -269,6 +269,11 @@ header button:hover {
   width: 100%;
 }
 
+#projects section {
+  display: flex;
+  flex-direction: column;
+}
+
 #projects article h2 {
   padding: 5px 10px;
 
