@@ -41,7 +41,7 @@ projects.forEach((e) => {
   DOM.projects.appendChild(article);
 
   const img = createElement("img");
-  img.src = `/img/project/${e.img}.jpg`;
+  img.src = `../img/project/${e.img}.jpg`;
   img.alt = `${e.title} banner`;
   article.appendChild(img);
 
