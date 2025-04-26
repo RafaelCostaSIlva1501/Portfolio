@@ -45,8 +45,8 @@ projects.forEach((e) => {
   img.alt = `${e.title} banner`;
   article.appendChild(img);
 
-  const section = createElement("section")
-  article.appendChild(section)
+  const section = createElement("section");
+  article.appendChild(section);
 
   const h2 = createElement("h2");
   h2.textContent = e.title;

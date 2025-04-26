@@ -1,18 +1,21 @@
 /*Estilos da sessão "certificações e diferenciais" em telas maiores*/
-@media screen and (min-width: 800px) {
-  html {
-    font-size: 16px;
-  }
-
-  #skills article {
-    margin: 20px auto;
-  }
-
+@media screen and (min-width: 900px) {
   #projects section h2 {
     font-size: 1.5rem;
   }
 
   #projects section p {
     font-size: 0.9rem;
+  }
+
+  #about {
+    min-height: 100vh;
+  }
+
+  #about .desktop {
+    display: block;
+    flex: 1;
+    width: 270px;
+    height: fit-content;
   }
 }
