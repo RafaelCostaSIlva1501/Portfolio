@@ -30,7 +30,7 @@ body {
   background-color: var(--c6);
 }
 
-header {
+body > header {
   display: flex;
   align-items: center;
 
@@ -39,7 +39,7 @@ header {
   background-color: var(--c1);
 }
 
-header nav {
+body > header nav {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -53,7 +53,7 @@ header nav {
   border-radius: 20px;
 }
 
-header button {
+body > header button {
   flex: 1;
 
   padding: 5px 10px;
@@ -86,6 +86,29 @@ header button {
   flex-direction: column;
   gap: 10px;
   width: 90%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.8s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+.delay-2 {
+  animation-delay: 1.5s;
+}
+.delay-3 {
+  animation-delay: 2.5s;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #home h1 {
@@ -136,8 +159,9 @@ header button {
 #skills {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 25px;
-
+  
   padding: 20px;
 
   background-color: var(--c2);
@@ -226,7 +250,7 @@ header button {
   align-items: center;
   gap: 20px;
 
-  min-height: 100vh;
+  height: 100%;
   padding: 20px;
 
   background-color: var(--c6);
@@ -357,8 +381,8 @@ header button {
 
 #creative {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 20px;
 
   width: 100%;
@@ -369,10 +393,11 @@ header button {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 20px;
+  gap: 10px;
 
   width: 100%;
-  margin-right: auto;
+  min-width: 300px;
+  max-width: 400px;
 
   border-radius: 3px;
 
@@ -388,16 +413,22 @@ header button {
 
 #creative section {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#creative header {
+  display: flex;
   justify-content: space-between;
   border-bottom: 3px solid var(--c5);
 }
 
-#creative section div {
+#creative header div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#creative section div img {
+#creative header div img {
   width: 25px;
 }

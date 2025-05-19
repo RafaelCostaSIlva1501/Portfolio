@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+  #home {
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+  }
+
+  #skills {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  #skills article {
+    width: 100%; /* Remove restrições de largura */
+    height: 100%;
+  }
+
+  #skills article h2 {
+    font-size: 1.2rem;
+  }
+
+  #skills article img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #about {
+    padding: 0 70px;
+  }
+}

@@ -84,12 +84,12 @@ projects.forEach((e) => {
 
   const github = createElement("a");
   github.href = e.github;
-  github.innerHTML = `<i class="fa-brands fa-github"></i> <span>Github</span>`;
+  github.innerHTML = "Github";
   div.appendChild(github);
 
   const view = createElement("a");
   view.href = e.view;
-  view.innerHTML = `<span>Ver Projeto</span> <i class="fa-solid fa-eye"></i>`;
+  view.innerHTML = "Ver projeto";
   div.appendChild(view);
 });
 
@@ -99,7 +99,9 @@ creative.forEach((e) => {
   const img = createElement("img");
   img.src = `img/project/${e.img}.jpg`;
 
-  const section = createElement("section");
+  const section = createElement("section")
+
+  const header = createElement("header");
 
   const h2 = createElement("h2");
   h2.textContent = e.title;
@@ -107,10 +109,10 @@ creative.forEach((e) => {
   const div = createElement("div");
 
   e.icon.forEach((e) => {
-    const icon = createElement("img")
-    icon.src = `img/icons/${e}.png`
+    const icon = createElement("img");
+    icon.src = `img/icons/${e}.png`;
 
-    div.appendChild(icon)
+    div.appendChild(icon);
   });
 
   const p = createElement("p");
@@ -118,8 +120,9 @@ creative.forEach((e) => {
 
   DOM.creative.appendChild(article);
   article.appendChild(img);
-  article.appendChild(section);
-  section.appendChild(h2);
-  section.appendChild(div);
-  article.appendChild(p);
+  article.appendChild(section)
+  section.appendChild(header);
+  header.appendChild(h2);
+  header.appendChild(div);
+  section.appendChild(p);
 });

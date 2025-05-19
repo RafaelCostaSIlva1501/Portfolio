@@ -58,12 +58,12 @@ export const creative = [
   },
 
   // Escrita
-  {
+  /*{
     title: "Escrita",
     text: "Na escrita, encontro um espaço de respiro e provocação. Entre poesias e reflexões, exploro o poder da linguagem para tensionar o sensível e o racional. Gosto de observar obras, desconstruí-las, refletir sobre o que dizem. No meu blog, compartilho esse olhar: análises, críticas e pensamentos que dialogam com arte, filosofia e inquietações pessoais.",
     img: "thumb-written",
     icon: ["blog"],
-  },
+  },*/
 
   // Ilustração
   {
