@@ -7,14 +7,17 @@
   }
 
   #skills {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0px;
   }
 
   #skills article {
-    width: 100%; /* Remove restrições de largura */
-    height: 100%;
+    width: 45%;
+    height: 45%;
+
+    margin: auto;
   }
 
   #skills article h2 {
