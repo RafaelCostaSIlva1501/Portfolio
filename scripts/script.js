@@ -37,25 +37,28 @@ DOM.btn.forEach((e, i) => {
 skills.forEach((e) => {
   const article = createElement("article");
 
+  const div1 = createElement("div");
+
   const h2 = createElement("h2");
   h2.textContent = e.title;
 
-  const div = createElement("div");
+  const div2 = createElement("div");
 
   e.icon.forEach((e) => {
     const img = createElement("img");
     img.src = `img/icons/${e}.png`;
     img.alt = `${e} Logo`;
 
-    div.appendChild(img);
+    div2.appendChild(img);
   });
 
   const p = createElement("p");
   p.textContent = e.text;
 
   DOM.skills.appendChild(article);
-  article.appendChild(h2);
-  article.appendChild(div);
+  article.appendChild(div1);
+  div1.appendChild(h2);
+  div1.appendChild(div2);
   article.appendChild(p);
 });
 
@@ -99,30 +102,17 @@ creative.forEach((e) => {
   const img = createElement("img");
   img.src = `img/project/${e.img}.jpg`;
 
-  const section = createElement("section")
-
-  const header = createElement("header");
-
-  const h2 = createElement("h2");
-  h2.textContent = e.title;
-
   const div = createElement("div");
 
-  e.icon.forEach((e) => {
-    const icon = createElement("img");
-    icon.src = `img/icons/${e}.png`;
-
-    div.appendChild(icon);
-  });
+  const h3 = createElement("h3");
+  h3.textContent = e.title;
 
   const p = createElement("p");
   p.textContent = e.text;
 
   DOM.creative.appendChild(article);
   article.appendChild(img);
-  article.appendChild(section)
-  section.appendChild(header);
-  header.appendChild(h2);
-  header.appendChild(div);
-  section.appendChild(p);
+  article.appendChild(div);
+  div.appendChild(h3);
+  div.appendChild(p);
 });

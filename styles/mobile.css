@@ -25,7 +25,6 @@ body {
   flex-direction: column;
 
   height: 100vh;
-  max-height: 100vh;
 
   background-color: var(--c6);
 }
@@ -73,19 +72,22 @@ body > header button {
 
 #home {
   display: flex;
-  flex-direction: column;
 
   height: 100%;
   padding: 50px;
 
-  background-color: var(--c6);
+  background: url(../img/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  background: linear-gradient(130deg, var(--c6), var(--c5), var(--c4));
 }
 
 #home > div {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 90%;
 }
 
 .fade-in {
@@ -95,13 +97,15 @@ body > header button {
 }
 
 .delay-1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.1s;
 }
+
 .delay-2 {
-  animation-delay: 1.5s;
+  animation-delay: 0.2s;
 }
+
 .delay-3 {
-  animation-delay: 2.5s;
+  animation-delay: 0.3s;
 }
 
 @keyframes aparecer {
@@ -161,8 +165,8 @@ body > header button {
   flex-direction: column;
   flex: 1;
   gap: 25px;
-  
-  padding: 20px;
+
+  padding: 24px;
 
   background-color: var(--c2);
 }
@@ -173,7 +177,7 @@ body > header button {
   gap: 20px;
 
   width: 100%;
-  height: fit-content;
+  max-width: 400px;
 
   margin: 0 auto;
   padding: 20px;
@@ -185,6 +189,12 @@ body > header button {
   transition: all 0.3s;
 }
 
+#skills article > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 #skills article:hover {
   transform: translateY(-10px);
   border-color: var(--c4);
@@ -192,16 +202,14 @@ body > header button {
 
 #skills article h2 {
   color: var(--c2);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
 }
 
-#skills article div {
+#skills article > div div {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 #skills article img {
@@ -215,12 +223,6 @@ body > header button {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
-}
-
-#skills > div {
-  display: flex;
-  gap: 20px;
-  margin: 0 auto;
 }
 
 #skills button {
@@ -253,9 +255,7 @@ body > header button {
   height: 100%;
   padding: 20px;
 
-  background-color: var(--c6);
-
-  text-align: center;
+  background: linear-gradient(130deg, var(--c6), var(--c5));
 }
 
 #projects article {
@@ -291,7 +291,7 @@ body > header button {
 }
 
 #projects article p {
-  padding: 0 1rem 1rem;
+  padding: 1rem;
 
   color: var(--c1);
   font-size: clamp(1rem, 2vw, 1.2rem);
@@ -351,23 +351,26 @@ body > header button {
 #about {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 
-  padding: 0 20px;
+  padding: 24px;
 
   background-color: var(--c1);
 }
 
 #about h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
   color: var(--c5);
+  font-size: 2rem;
   font-weight: 700;
 }
 
+#about span {
+  color: #496bd1;
+}
+
 #about h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
   color: var(--c5);
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -375,60 +378,44 @@ body > header button {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--c5);
-
-  margin-bottom: 10px;
 }
 
 #creative {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  flex-direction: column;
+  gap: 24px;
 
   width: 100%;
-  margin-top: 20px;
 }
 
 #creative article {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 10px;
 
   width: 100%;
-  min-width: 300px;
-  max-width: 400px;
+  max-width: 500px;
 
-  border-radius: 3px;
-
-  color: var(--c1);
+  border-radius: 4px;
+  box-shadow: 0px 0px 12px #00000091;
 
   transition: all 0.3s ease;
+
+  overflow: hidden;
 }
 
 #creative article img {
   width: 100%;
-  height: fit-content;
 }
 
-#creative section {
+#creative div {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
 
-#creative header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid var(--c5);
-}
+  width: 100%;
+  height: 100%;
+  padding: 12px;
 
-#creative header div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#creative header div img {
-  width: 25px;
+  background-color: #2529404b;
 }

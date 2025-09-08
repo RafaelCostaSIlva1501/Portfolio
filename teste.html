@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Arte</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .card-content p {
+      margin: 1rem 0;
+      color: #ccc;
+    }
+
+    .links {
+      margin-top: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 0.6rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .spotify {
+      background: #1db954;
+      color: #fff;
+    }
+
+    .spotify:hover {
+      background: #17a74a;
+    }
+
+    .youtube {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .youtube:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Além do Desenvolvimento</h1>
+    <p>Arte e &lt;/Código&gt;</p>
+  </header>
+
+  <section class="section">
+    <!-- Card Música -->
+    <div class="card">
+      <img src="img/project/thumb-music.jpg" alt="Meus álbuns de música">
+      <div class="card-content">
+        <h2>Música</h2>
+        <p>
+          Compositor e produtor musical com obras publicadas nas principais plataformas digitais. 
+          Minha criação sonora transita por atmosferas cinematográficas, com foco em trilhas instrumentais. 
+          Exploro temas melancólicos, sombrios e emocionalmente profundos em paisagens sonoras imersivas.
+        </p>
+        <div class="links">
+          <a href="#" class="spotify">Ouvir no Spotify</a>
+          <a href="#" class="youtube">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Ilustração -->
+    <div class="card">
+      <img src="img/project/thumb-illustration.jpg" alt="Meus desenhos de ilustração">
+      <div class="card-content">
+        <h2>Ilustração</h2>
+        <p>
+          O desenho sempre foi um espaço íntimo e silencioso no meu percurso, 
+          uma prática amadora mas profundamente expressiva. 
+          Gosto de composições realistas, explorando hachuras, contrastes e detalhes minuciosos 
+          para traduzir emoções em silêncio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

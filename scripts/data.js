@@ -4,8 +4,8 @@ export const projects = [
     img: "thumb-mini-games",
     title: "Desenvolvimento de Jogos",
     text: "Coleção de jogos interativos que unem inovação, prática e aprendizado em programação.",
-    github: "https://github.com/RafaelCostaSIlva1501/Mini-Game",
-    view: "https://rafaelcostasilva1501.github.io/Mini-Game/",
+    github: "https://github.com/RafaelCostaSIlva1501/GameHub",
+    view: "https://rafaelcostasilva1501.github.io/GameHub/",
   },
 
   // Landing Pages
@@ -40,6 +40,13 @@ export const skills = [
     icon: ["git", "github"],
   },
 
+  // DESIGN
+  {
+    title: "DESIGN",
+    text: "O design transforma ideias em experiências visuais impactantes. Desde a escolha de cores e tipografia até a criação de layouts e elementos gráficos, cada detalhe contribui para interfaces esteticamente agradáveis e funcionais.",
+    icon: ["photoshop", "canva", "gimp", "figma"],
+  },
+
   // PRÁTICAS DE PROGRAMAÇÃO
   {
     title: "PRÁTICAS DE PROGRAMAÇÃO",
@@ -58,12 +65,12 @@ export const creative = [
   },
 
   // Escrita
-  /*{
+  {
     title: "Escrita",
     text: "Na escrita, encontro um espaço de respiro e provocação. Entre poesias e reflexões, exploro o poder da linguagem para tensionar o sensível e o racional. Gosto de observar obras, desconstruí-las, refletir sobre o que dizem. No meu blog, compartilho esse olhar: análises, críticas e pensamentos que dialogam com arte, filosofia e inquietações pessoais.",
     img: "thumb-written",
     icon: ["blog"],
-  },*/
+  },
 
   // Ilustração
   {
